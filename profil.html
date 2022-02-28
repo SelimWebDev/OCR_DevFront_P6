@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/d5ff2cdc84.js" crossorigin="anonymous"></script>
+    <link href="css/profil.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="assets/images/logo.png" class="logo" />
+    </header>
+    <main id="main">
+      <div class="photograph-header">
+        <div class="left_contain"></div>
+        <button aria-label="contactez moi" class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="right_contain"></div>
+      </div>
+      <div id="filter">
+        <label for="filter-select">Triez par :</label>
+        <select id="filter-select">
+          <option value=""></option>
+          <option value="title">Titre</option>
+          <option value="popularity">Populartié</option>
+        </select>
+      </div>
+    </main>
+    <div id="contact_modal">
+			<div class="modal">
+				<header>
+          <h2>Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()" aria-label="Fermer" alt="icone de fermeture du modal"/>
+        </header>
+        <div id="form-contain">
+          <form>
+            <span id="head-form">Contactez-moi</span>
+            <span id="name-form"></span>
+            <label for="firstname">Prénom</label>
+            <input id="firstname" />
+            <label for="lastname">Nom</label>
+            <input id="lastname" />
+            <label for="email">Email</label>
+            <input id="email" />
+            <label for="message">Votre message</label>
+            <input id="message" />
+            <button class="contact_button" id="send_button">Envoyer</button>
+          </form>
+        </div>
+			</div>
+		</div>
+    <div class="mediaSection">
+
+    </div>
+    <div id="bottomBar">
+      <span id="totalLikeSpan">
+        200
+        <i class="fas fa-heart"></i>
+      </span>
+      <span id="priceSpan">300€ / jour</span>
+    </div>
+    <diV id="modal-media">
+      <i aria-label="fermer" id="closeButton" tabindex="0" class="fas fa-times"></i>
+      <div id="img-modal-layer">
+        <i  aria-label="image précédente" id="previous-button" class="fas fa-chevron-left" tabindex="0"></i>
+        <img id="img-modal">
+        <video controls id="video-modal"></video>
+        <i aria-label="image suivante" id="next-button" class="fas fa-chevron-right" tabindex="0"></i>
+      </div>
+    </diV>
+    <script src="data/data.js"></script>
+    <script src="scripts/factories/media.js"></script>
+    <script src="scripts/factories/Photographer.js"></script>
+    <script src="scripts/pages/profil.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
+  </body>
+</html>
